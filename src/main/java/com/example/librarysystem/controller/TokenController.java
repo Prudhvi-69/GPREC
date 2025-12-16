@@ -19,7 +19,7 @@ public class TokenController {
         return Jwts.builder()
                 .setSubject("library-client")
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 10 * 60 * 1000)) // 10 minutes
+                .setExpiration(new Date(System.currentTimeMillis() + 60*1000*10)) // 10 minutes
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
