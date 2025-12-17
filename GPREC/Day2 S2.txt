@@ -1,0 +1,119 @@
+
+
+GitHub repo link of our Library App and notes from class : https://github.com/Prudhvi-69/GPREC.git
+
+
+
+
+
+
+Secret Key (secretKey and key):
+
+secretKey - A string that serves as the raw secret for JWT signing
+
+key - The cryptographic key object created from the secret string, used to digitally sign the JWT token
+
+Purpose: Ensures JWT authenticity - only someone with this secret can create valid tokens
+
+SignatureAlgorithm (HS256):
+
+HS256 = HMAC with SHA-256 hash algorithm
+
+Purpose: Defines how the JWT signature is computed using the secret key
+
+Creates a digital signature that proves the token hasn't been tampered with
+
+How they work together:
+
+The JWT contains claims (subject, expiration, etc.)
+
+HS256 algorithm uses the secret key to create a signature of these claims
+
+The signature is appended to the JWT
+
+When validating, the same secret key and algorithm verify the signature matches the claims
+
+
+
+
+
+
+
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+														<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+															<artifactId>jjwt-api</artifactId>
+			<version>0.11.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+															<artifactId>jjwt-impl</artifactId>
+			<version>0.11.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+														<artifactId>jjwt-jackson</artifactId>
+			<version>0.11.5</version>
+			<scope>runtime</scope>
+		</dependency>
+
+
+
+
+
+
+
+
+
+JUnit is an open-source framework for writing and running unit tests in Java. It allows developers to create test cases for individual units of code (like methods or classes) and automatically verify if the actual output matches the expected results. 
+** Technically this refers to something called writing tests that will the testing of individual code parts (methods, classes and blocks).
+
+
+
+Mockito is a popular Java mocking framework used for unit testing. It helps isolate the unit under test by replacing real dependencies (like databases, APIs, or services) with mock objects. These mocks simulate the behavior of dependencies, allowing tests to focus mainly on the logic of the code being tested. Mockito makes tests faster, more reliable, and easier to maintain by avoiding external dependencies and enabling behavior verification (e.g., checking if a method was called with the right parameters).
+** Main intention of using Mockito is to create the fake testing scenarios for databases, endpoints, and objects)
+** This is going to make sure whatever we are going to create is going to contained in a isolated place without effecting the real database or any real endpoints, so that we can perform the unit testing without issues and much faster as there will be no connection to database is made and also no need to run the app manually to check the endpoints are connected or not.
+
+
+Main intention of using JUnit and Mockito is to ensure our code is working well without issues at the unit level and also it will make the integration at the development level faster as we will be testing the code already at the unit level.
+
+
+
+
+src folder -> test folder -> java -> com -> example -> library folder, 
+next we should create a Java file with Test name in it to identify it as the testing file.
+
+Ex: SampleMockitoTest.java 
+
+Testing concept will use few important annotations : 
+
+@Test : The block code below this annotation will be considered as the test case scanario. And it will be marked passed, if assertion is true, and marked failed, if the assertion is false.
+
+@Mock : It is used to create fake objects for easy testing.
+
+@InjectMocks : It is used to link the testing layer/class object to the mocking object.
+
+
+@ExtendWith : It is used to enable the code below it to be executed for testing with maven. It will act as a container for all test cases.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

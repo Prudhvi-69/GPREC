@@ -1,0 +1,23 @@
+		Install Postman
+		Install MySQL
+
+		Finish backend with Entity, Controller, Service
+		and Repository files.
+
+		Make sure we are going to know properly about 
+		all the HTTP methods that we have discussed🎀
+
+header : 
+
+eyJhbGciOiJIUzI1NiJ9
+
+payload : 
+
+eyJzdWIiOiJsaWJyYXJ5LWNsaWVudCIsImlhdCI6MTc2NTg2OTcwOSwiZXhwIjoxNzY1ODcwMzA5fQ
+
+signature : 
+
+B_QBrSjMAXnLFEA16U1aWgY1Lr7ev48OoCOBY_LVSSw
+
+
+

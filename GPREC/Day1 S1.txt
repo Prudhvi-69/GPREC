@@ -1,0 +1,127 @@
+Install JDK 
+
+Open : Program Files -> Java -> jdk-17
+Copy the path from the addres bar 
+
+Search Environment Variables : In system(not in browser)
+
+Open System Variables 
+
+Click on New : 
+for jdk : Variable Name : JAVA_HOME and paste the path
+for maven : Variable Name : MAVEN_HOME & paste the path
+
+Click on Path : open it 
+Click on New : paste the jdk location with bin folder 
+
+
+To run the Spring-Boot application : 
+
+1. Run the SpringApplication as a Java file 
+2. Using commands : 
+			1. For global : mvn spring-boot:run 
+			2. For local : 	  .\mvnw spring-boot:run 
+
+Main Annotations used in SpringBoot Application : 
+ * Controller Layer :  @Controller 
+ * Service Layer : @Service 
+ * Repository Layer : @Repository 
+ * For connecting to frontend : 
+			@RequestMapping, @RestController  
+ * For REST API : 
+@GetMapping, @PostMapping, @PutMapping, @DeleteMapping
+
+
+
+@GetMapping('#jdk25-windows')
+
+
+Operation 			HTTP methods 	JPA Repo Methods 
+
+C							post						save()
+R							get							findAll(), findById()
+U							put							save() 
+D 						delete 					delete()
+
+
+
+
+
+
+
+
+@Table 
+@Entity  : The class below this annotation will work as a table in the Database.
+@Id : This is used to create primary key
+@Column : This is used to specify the variable as column 
+
+
+
+
+
+@Entity 
+public class Student
+{
+	@Column
+	String name;
+	@Column 
+	int roll_Number;
+	@Column 
+	int age;
+	@Column
+	String location;
+}
+
+
+
+
+
+
+When sending data through postman/swagger/thunderclient we should always keep the header values as : 
+
+
+content-type : application/json 
+
+
+
+https://tinyurl.com/gprec-1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
